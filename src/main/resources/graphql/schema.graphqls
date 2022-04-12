@@ -1,0 +1,19 @@
+type Query {
+    helloWorld: String!
+    getPostById(id: ID!): Post
+}
+
+type Mutation {
+    createPost(post: CreatePost): Post
+}
+
+type Post {
+    id: ID!
+    title: String!
+    description: String!
+}
+
+input CreatePost {
+    title: String
+    description: String
+}
